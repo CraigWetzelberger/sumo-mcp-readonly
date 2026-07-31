@@ -13,7 +13,25 @@ async function main(): Promise<void> {
     if (err instanceof ConfigError) {
       process.stderr.write(`\nConfiguration Error:\n${err.message}\n\n`);
       process.stderr.write(
-        'Ensure all required environment variables are set. See .env.example for reference.\n\n',
+        'This server is not meant to be run directly. Add it to your MCP client config:\n\n',
+      );
+      process.stderr.write(
+        '  {\n' +
+        '    "mcpServers": {\n' +
+        '      "sumo-mcp-readonly": {\n' +
+        '        "command": "npx",\n' +
+        '        "args": ["-y", "sumo-mcp-readonly"],\n' +
+        '        "env": {\n' +
+        '          "SUMO_ACCESS_ID": "your-access-id",\n' +
+        '          "SUMO_ACCESS_KEY": "your-access-key",\n' +
+        '          "SUMO_API_BASE_URL": "https://api.sumologic.com/api"\n' +
+        '        }\n' +
+        '      }\n' +
+        '    }\n' +
+        '  }\n\n',
+      );
+      process.stderr.write(
+        'Setup guide: https://github.com/CraigWetzelberger/sumo-mcp-readonly#quick-start\n\n',
       );
     } else {
       process.stderr.write(
