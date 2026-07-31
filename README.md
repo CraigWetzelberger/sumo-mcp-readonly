@@ -67,7 +67,7 @@ sudo apt-get install -y nodejs
 ### 1. Create your Sumo Logic Access Key
 
 1. Log into Sumo Logic
-2. Go to **Administration > Security > Access Keys** ([docs](https://www.sumologic.com/help/docs/manage/security/access-keys/))
+2. Click your username (bottom-left) and select **Personal Access Keys** ([docs](https://www.sumologic.com/help/docs/manage/security/access-keys/))
 3. Click **+ Add Access Key**
 4. Name it something like "MCP Server"
 
