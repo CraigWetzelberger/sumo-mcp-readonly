@@ -82,7 +82,7 @@ The built-in **Analyst** role works. If you want a minimal custom role, grant `V
 
 ### 2. Connect to your MCP client
 
-Add the server to your client's MCP configuration:
+Add the server to your client's MCP configuration. No install command is needed — your MCP client downloads the package automatically on first use.
 
 - **Kiro** — `.kiro/settings/mcp.json`
 - **Claude Code** — `claude_code_config.json`
