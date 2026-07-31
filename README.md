@@ -80,41 +80,7 @@ The built-in **Analyst** role works. If you want a minimal custom role, grant `V
 
 > **Note**: The Search Job API requires an Enterprise-tier Sumo Logic account. Free, Professional, and Essentials plans will get a 403 error. ([docs](https://www.sumologic.com/help/docs/api/search-job/))
 
-### 2. Configure credentials
-
-**macOS / Linux:**
-
-```bash
-cp .env.example .env
-```
-
-**Windows (PowerShell):**
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Edit `.env` and fill in your Access ID, Access Key, and API base URL:
-
-```bash
-SUMO_ACCESS_ID=your-access-id
-SUMO_ACCESS_KEY=your-access-key
-SUMO_API_BASE_URL=https://api.sumologic.com/api
-```
-
-See [Determine your API endpoint](#determine-your-api-endpoint) to find the correct URL for your region.
-
-### 3. Verify it works
-
-```bash
-npm start
-```
-
-The server starts and listens on stdio. You'll see a startup log on stderr. Press Ctrl+C to stop.
-
-> **Note**: `npm start` loads credentials from your `.env` file. When running via an MCP client (step 5), the client passes credentials through its own `env` block instead — the `.env` file is only needed for this manual verification step.
-
-### 4. Connect to your MCP client
+### 2. Connect to your MCP client
 
 Add the server to your client's MCP configuration:
 
