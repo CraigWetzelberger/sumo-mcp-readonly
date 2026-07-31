@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (NEVER commit credentials)
+.env
+.env.local
+.env.*.local
+
+# Session exports (may contain secrets/internal details)
+chat.json
+
+# Logs
+*.log
+
+# Test coverage
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
