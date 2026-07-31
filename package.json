@@ -1,6 +1,6 @@
 {
   "name": "sumo-mcp-readonly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read-only Model Context Protocol server for querying Sumo Logic logs",
   "type": "module",
   "main": "dist/index.js",
